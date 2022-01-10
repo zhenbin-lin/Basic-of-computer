@@ -9,17 +9,6 @@
 4. 从不是空的桶里把元素再放回原来的序列中。
  */
 
-using VI = vector<int>;
-
-
-void printInts(const VI &nums) {
-    for (int num : nums) {
-        cout << num << " ";
-    }
-    cout << endl;
-}
-
-
 void insertSort(VI & nums) {
     vector<int> temp = nums;
     for (int i = 1; i < temp.size(); ++i) {
@@ -70,4 +59,11 @@ int main()
     cout << endl;
 
     return 0;
+}
+
+void printInts(const VI &nums) {
+    for (int num : nums) {
+        cout << num << " ";
+    }
+    cout << endl;
 }

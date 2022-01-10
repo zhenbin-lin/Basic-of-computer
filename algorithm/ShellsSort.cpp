@@ -1,17 +1,6 @@
 #include "common.h"
 /* 希尔排序 */
 
-using VI = vector<int>;
-
-
-
-void printInts(const VI &nums) {
-    for (int num : nums) {
-        cout << num << " ";
-    }
-    cout << endl;
-}
-
 /* 
 希尔排序中相等数据可能会交换位置，所以希尔排序是不稳定的算法。
 
@@ -45,9 +34,6 @@ void ShellsSort(VI &nums)
 }
 
 
-void msort(VI &nums) {
-    ShellsSort(nums);
-}
 
 
 int main()
@@ -59,4 +45,16 @@ int main()
     cout << "after: ";
     printInts(nums);
     return 0;
+}
+
+void printInts(const VI &nums) {
+    for (int num : nums) {
+        cout << num << " ";
+    }
+    cout << endl;
+}
+
+
+void msort(VI &nums) {
+    ShellsSort(nums);
 }

@@ -18,6 +18,9 @@ iParent(i) = (i - 1) / 2;
 iLeftChild(i) = 2 * i + 1;
 iRightChild(i) = 2 * i + 2;
  */
+/**
+ * 父节点与子节点进行比较，如果父节点小于某个子节点，则将父节点下移 
+ */
 void sift_down(VI &nums, int start, int end) {
     int parent = start;
     int child = parent * 2 + 1;

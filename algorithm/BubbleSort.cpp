@@ -8,7 +8,6 @@
         最好的时间复杂度为O(n)，即全部都是有序的
     2. 为稳定排序算法
  */
-using VI = vector<int>;
 
 VI BubbleSort(VI &nums)
 {
@@ -16,6 +15,7 @@ VI BubbleSort(VI &nums)
     while (flag) {
         flag = false;
         for (int i = 1; i < nums.size(); ++i) {
+            /* 前一个大于后一个交换顺序 */
             if (nums[i - 1] > nums[i]) {
                 flag = true;
                 swap(nums[i], nums[i - 1]);
@@ -25,16 +25,8 @@ VI BubbleSort(VI &nums)
     return nums;
 }
 
-void msort(VI &nums) {
-    BubbleSort(nums);
-}
 
-void printInts(const VI &nums) {
-    for (int num : nums) {
-        cout << num << " ";
-    }
-    cout << endl;
-}
+
 
 int main()
 {
@@ -47,4 +39,15 @@ int main()
     cout << endl;
 
     return 0;
+}
+
+void printInts(const VI &nums) {
+    for (int num : nums) {
+        cout << num << " ";
+    }
+    cout << endl;
+}
+
+void msort(VI &nums) {
+    BubbleSort(nums);
 }

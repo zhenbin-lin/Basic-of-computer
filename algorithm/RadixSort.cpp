@@ -1,17 +1,6 @@
 #include "common.h"
 /* 快速排序算法 */
 
-using VI = vector<int>;
-
-
-
-void printInts(const VI &nums) {
-    for (int num : nums) {
-        cout << num << " ";
-    }
-    cout << endl;
-}
-
 /* 
 它的工作原理是将待排序的元素拆分为 K 个关键字（比较两个元素时，先比较第一关键字，如果相同再比较第二关键字……），
 然后先对第 K  关键字进行稳定排序，再对第 K - 1 关键字进行稳定排序，
@@ -33,12 +22,6 @@ void RadixSort(VI &nums)
     }
 }
 
-
-void msort(VI &nums) {
-    RadixSort(nums);
-}
-
-
 int main()
 {
     VI nums = {3, 5, 90, 2, 5, 76, 43, 21, 11};
@@ -50,4 +33,15 @@ int main()
     cout << endl;
 
     return 0;
+}
+
+void printInts(const VI &nums) {
+    for (int num : nums) {
+        cout << num << " ";
+    }
+    cout << endl;
+}
+
+void msort(VI &nums) {
+    RadixSort(nums);
 }

@@ -1,18 +1,6 @@
 #include "common.h"
 /* 插入排序算法 */
-
-using VI = vector<int>;
-
-
-
-void printInts(const VI &nums) {
-    for (int num : nums) {
-        cout << num << " ";
-    }
-    cout << endl;
-}
-
-/* 
+/*
     1. 当数据正序时，执行效率最好，每次插入都不用移动前面的元素，时间复杂度为O(N)。
        当数据反序时，执行效率最差，每次插入都要前面的元素后移，时间复杂度为O(N^2)。
 
@@ -37,10 +25,6 @@ void InsertionSort(VI &nums)
 }
 
 
-void msort(VI &nums) {
-    InsertionSort(nums);
-}
-
 
 int main()
 {
@@ -51,4 +35,17 @@ int main()
     cout << "after: ";
     printInts(nums);
     return 0;
+}
+
+
+void msort(VI &nums) {
+    InsertionSort(nums);
+}
+
+
+void printInts(const VI &nums) {
+    for (int num : nums) {
+        cout << num << " ";
+    }
+    cout << endl;
 }

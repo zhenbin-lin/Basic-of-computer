@@ -1,17 +1,5 @@
 #include "common.h"
 /* 快速排序算法 */
-
-using VI = vector<int>;
-
-
-
-void printInts(const VI &nums) {
-    for (int num : nums) {
-        cout << num << " ";
-    }
-    cout << endl;
-}
-
 /* 
     1. 快速排序在每次分割的过程中，需要 1 个空间存储基准值。
         而快速排序的大概需要 logN次的分割处理，所以占用空间也是 logN 个
@@ -37,9 +25,6 @@ void Quicksort(VI &nums, int start, int end)
 }
 
 
-void msort(VI &nums) {
-    Quicksort(nums, 0, nums.size() - 1);
-}
 
 
 int main()
@@ -53,4 +38,15 @@ int main()
     cout << endl;
 
     return 0;
+}
+
+void printInts(const VI &nums) {
+    for (int num : nums) {
+        cout << num << " ";
+    }
+    cout << endl;
+}
+
+void msort(VI &nums) {
+    Quicksort(nums, 0, nums.size() - 1);
 }

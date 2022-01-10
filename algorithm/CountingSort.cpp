@@ -1,16 +1,5 @@
 #include "common.h"
-/* 插入排序算法 */
-
-using VI = vector<int>;
-
-
-
-void printInts(const VI &nums) {
-    for (int num : nums) {
-        cout << num << " ";
-    }
-    cout << endl;
-}
+/* 计算排序 */
 
 /* 
 它的工作过程分为三个步骤：
@@ -37,11 +26,6 @@ void CountingSort(VI &nums)
 }
 
 
-void msort(VI &nums) {
-    CountingSort(nums);
-}
-
-
 int main()
 {
     VI nums = {3, 5, 90, 2, 5, 76, 43, 21, 11};
@@ -51,4 +35,15 @@ int main()
     cout << "after: ";
     printInts(nums);
     return 0;
+}
+
+void printInts(const VI &nums) {
+    for (int num : nums) {
+        cout << num << " ";
+    }
+    cout << endl;
+}
+
+void msort(VI &nums) {
+    CountingSort(nums);
 }
